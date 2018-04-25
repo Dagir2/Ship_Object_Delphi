@@ -1,0 +1,10 @@
+unit MyTypes;
+
+interface
+uses System.SysUtils;
+
+type
+      MField = Array  of Array of byte;
+implementation
+
+end.

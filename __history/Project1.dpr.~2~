@@ -1,0 +1,15 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  Field in 'Field.pas' {Form1},
+  PShip1x1 in 'PShip1x1.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

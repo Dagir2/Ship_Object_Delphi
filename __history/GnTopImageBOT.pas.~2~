@@ -1,0 +1,98 @@
+unit GnTopImageBOT;
+
+interface
+
+uses
+  System.Classes;
+
+type
+  TGnTopImageBOT = class(TThread)
+  private
+  FIimage:integer;
+
+  procedure CreateGnTopImageBOT(i,LeftShift,TopShift:integer);
+    { Private declarations }
+  protected
+    procedure Execute; override;
+  end;
+
+implementation
+ uses Field,PShip1x1,PShip2x2,Pship3x3,Pship4x4,PImage,System.SysUtils;
+{
+  Important: Methods and properties of objects in visual components can only be
+  used in a method called using Synchronize, for example,
+
+      Synchronize(UpdateCaption);
+
+  and UpdateCaption could look like,
+
+    procedure GnTopImageBOT.UpdateCaption;
+    begin
+      Form1.Caption := 'Updated in a thread';
+    end;
+
+    or
+
+    Synchronize(
+      procedure
+      begin
+        Form1.Caption := 'Updated in thread via an anonymous method'
+      end
+      )
+    );
+
+  where an anonymous method is passed.
+
+  Similarly, the developer can call the Queue method with similar parameters as
+  above, instead passing another TThread class as the first parameter, putting
+  the calling thread in a queue with the other thread.
+
+}
+
+{ GnTopImageBOT }
+
+procedure TGnTopImageBOT.CreateGnTopImageBOT(i,LeftShift,TopShift:integer);
+begin
+  Image[i]:=TTopImageBOT.Create(Form1);
+Image[i].Parent:=Form1;
+Image[i].Left:=20+LeftShift;
+ Image[i].Top:=20+TopShift;
+ Image[i].Width:=20;
+ Image[i].Height:=20;
+ Image[i].Picture.LoadFromFile('Other/TopImage.png');
+ Image[i].Stretch:=True;
+ Image[i].Visible:=true;
+ Image[i].Tag:=i;
+ Image[i].OnClick:=Form1.ImageOnClick;
+
+end;
+
+procedure TGnTopImageBOT.Execute;
+var i,j,LeftShift,TopShift:integer;
+begin
+
+       SetLength(Image,NImage);
+
+       LeftShift:=0;
+       TopShift:=0;
+
+       for i := 0 to n1-1 do
+       begin
+        for j := 0 to n1-1 do
+         begin
+        CreateGnTopImageBOT(FIimage,LeftShift,TopShift);
+
+
+        Image[FIimage].Fx:=i+1;
+        Image[FIimage].Fy:=j+1;
+        LeftShift:=LeftShift+21;
+        inc(FIimage);
+        end;
+         LeftShift:=0;
+          TopShift:=TopShift+21;
+       end;
+
+end;
+
+
+end.

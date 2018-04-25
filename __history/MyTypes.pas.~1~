@@ -1,0 +1,10 @@
+unit MyTypes;
+
+interface
+ uses System;
+type
+      MField = Array  of Array of byte;
+      test = (fxdfx,dfxxfx,dfxf);
+implementation
+
+end.
