@@ -1,0 +1,72 @@
+unit GnImageUser;
+
+interface
+
+uses
+  System.Classes;
+
+type
+  TGnImageUser = class(TThread)
+  private
+   FIimage:integer;
+
+  procedure CreateGnTopImageBOT(LeftShift,TopShift,j,i:integer);
+  protected
+    procedure Execute; override;
+  end;
+
+implementation
+
+ uses Field,PShip1x1,PShip2x2,Pship3x3,Pship4x4,PImage,System.SysUtils,Menu;
+
+procedure TGnImageUser.CreateGnTopImageBOT(LeftShift, TopShift, j, i: integer);
+begin
+if (j<>0) or (i<>n-1) or (i<>0) or (j<>n-1) then
+  PlerImage[j,i]:=TTopImageBOT.Create(PlerImage[j,i]);
+
+
+
+if (j<>0) and (i<>n-1) and (i<>0) and (j<>n-1)  then
+  begin
+  PlerImage[j,i]:=TTopImageBOT.Create(Form1.Panel1);
+  PlerImage[j,i].Parent:=Form1.Panel1;
+  PlerImage[j,i].Left:=0+LeftShift;
+  PlerImage[j,i].Top:=0+TopShift;
+  PlerImage[j,i].Width:=SizeImage;
+  PlerImage[j,i].Height:=SizeImage;
+  PlerImage[j,i].Picture:=Empty.Picture;
+  PlerImage[j,i].Stretch:=True;
+  PlerImage[j,i].Visible:=true;
+  PlerImage[j,i].Tag:=i;
+  PlerImage[j,i].Enabled:=true;
+  end;
+
+end;
+
+
+procedure TGnImageUser.Execute;
+ var i,j,LeftShift,TopShift:integer;
+begin
+
+       SetLength(PlerImage,n,n);
+
+       LeftShift:=0;
+       TopShift:=0;
+
+       for i := 0 to n-1 do
+       begin
+        for j := 0 to n-1 do
+         begin
+        CreateGnTopImageBOT(LeftShift,TopShift,j,i);
+
+
+        PlerImage[j,i].Fx:=j;
+        PlerImage[j,i].Fy:=i;
+        LeftShift:=LeftShift+SizeImage;
+        end;
+         LeftShift:=0;
+          TopShift:=TopShift+SizeImage;
+       end;
+end;
+
+end.

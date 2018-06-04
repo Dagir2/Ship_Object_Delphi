@@ -1,9 +1,9 @@
 object Form1: TForm1
-  Left = 0
-  Top = 0
-  Caption = 'Form1'
-  ClientHeight = 600
-  ClientWidth = 1302
+  Left = 55
+  Top = 185
+  Caption = 'Gams'
+  ClientHeight = 606
+  ClientWidth = 1318
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,14 +11,16 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesigned
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
     Left = 0
     Top = 0
-    Width = 1302
-    Height = 600
+    Width = 1318
+    Height = 606
     Align = alClient
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D49484452000007800000
@@ -26618,36 +26620,33 @@ object Form1: TForm1
     ExplicitWidth = 104
     ExplicitHeight = 97
   end
-  object Button3: TButton
-    Left = 600
-    Top = 96
-    Width = 129
-    Height = 57
-    Caption = #1053#1072#1078#1072#1090#1100' '#1085#1072' '#1074#1089#1077' IMG'
-    TabOrder = 0
-    OnClick = Button3Click
-  end
   object Panel1: TPanel
     Left = 40
     Top = 32
-    Width = 433
+    Width = 489
     Height = 489
-    TabOrder = 1
+    TabOrder = 0
   end
   object Panel2: TPanel
     Left = 807
     Top = 32
-    Width = 450
+    Width = 474
     Height = 489
-    TabOrder = 2
+    TabOrder = 1
   end
-  object Button4: TButton
-    Left = 615
-    Top = 196
-    Width = 89
-    Height = 33
-    Caption = #1053#1072#1095#1072#1090#1100' '#1080#1075#1088#1091
-    TabOrder = 3
-    OnClick = Button4Click
+  object BitBtn1: TBitBtn
+    Left = 576
+    Top = 168
+    Width = 153
+    Height = 121
+    Caption = #1053#1072#1095#1072#1090#1100' '#1048#1075#1088#1091
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -21
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+    OnClick = BitBtn1Click
   end
 end

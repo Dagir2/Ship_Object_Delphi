@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Grids, Vcl.StdCtrls,Math,GnShip ,
-  PShip2x2,PShip1x1,MyTypes,Pship3x3,Pship4x4,PImage,Menu,Vcl.Imaging.pngimage,GnTopImageBOT,GnImageUser,GnShipUser;
+  PShip2x2,PShip1x1,MyTypes,Pship3x3,Pship4x4,PImage,Menu,Vcl.Imaging.pngimage,GnTopImageBOT,GnImageUser,GnShipUser,
+  Vcl.Buttons;
 
 type
 MShip1x1 = Array of TShip1;
@@ -17,15 +18,15 @@ MShip4x4 = Array of TShip4;
 MImage =  Array of Array of TTopImageBOT;
 
 TForm1 = class(TForm)
-    Button3: TButton;
     Panel1: TPanel;
     Panel2: TPanel;
-    Button4: TButton;
     Image1: TImage;
+    BitBtn1: TBitBtn;
 
     procedure FormCreate(Sender: TObject);
     procedure Button3Click(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -63,6 +64,18 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm1.BitBtn1Click(Sender: TObject);
+var  HT:ThUser;
+i,j,k:integer;
+begin
+        HT:=ThUser.Create(False);
+       HT.Priority:=tpNormal;
+
+    for i := 0 to n-1 do
+        for j := 0 to n-1 do
+          Image[j,i].Enabled:=True;
+end;
 
 procedure TForm1.BotImageOnClick(Sender: TObject);
 var Fimage:TTopImageBOT;
@@ -138,16 +151,11 @@ begin
     ImageOnClick(Image[j,i]);
 end;
 
-procedure TForm1.Button4Click(Sender: TObject);
-var  HT:ThUser;
-i,j,k:integer;
-begin
-        HT:=ThUser.Create(False);
-       HT.Priority:=tpNormal;
 
-    for i := 0 to n-1 do
-        for j := 0 to n-1 do
-          Image[j,i].Enabled:=True;
+
+procedure TForm1.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+begin
+halt;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
@@ -157,6 +165,7 @@ var  i,j:integer;
   H2:TGnImageUser;
 
 begin
+
    NImage:=n*n;
    SetLength(Image,NImage);
 

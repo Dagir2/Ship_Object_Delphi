@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls;
 
 type
   TForm2 = class(TForm)
@@ -23,7 +24,7 @@ type
 
 var
   Form2: TForm2;
-  n,n1:integer;
+  n,n1,SizeImage:integer;
    z,z1,z2,z3:Integer;
 implementation
 uses Field,Option;
@@ -32,14 +33,15 @@ uses Field,Option;
 
 procedure TForm2.Button1Click(Sender: TObject);
 begin
-
 Application.CreateForm(TForm1, Form1);
 Form1.Show;
+Form2.Visible:=false;
 end;
 
 procedure TForm2.Button2Click(Sender: TObject);
 begin
 Form3.Show;
+form2.Visible:=false;
 end;
 
 procedure TForm2.Button3Click(Sender: TObject);
@@ -49,6 +51,7 @@ end;
 
 procedure TForm2.FormCreate(Sender: TObject);
 begin
+    SizeImage:=50;
     n:=10;
    n1:=n;
    z:=4;

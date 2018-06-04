@@ -1,0 +1,36 @@
+﻿object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 231
+  ClientWidth = 505
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Сохранить: TButton
+    Left = 320
+    Top = 120
+    Width = 81
+    Height = 33
+    Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
+    TabOrder = 0
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 40
+    Top = 32
+    Width = 185
+    Height = 105
+    Caption = #1055#1086#1083#1077
+    Items.Strings = (
+      #1055#1086#1083#1077' 10x10'
+      #1055#1086#1083#1077' 15x15'
+      #1055#1086#1083#1077' 25x25')
+    TabOrder = 1
+  end
+end

@@ -1,0 +1,89 @@
+unit PShip1x1;
+
+interface
+uses
+   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Math,mytypes,Vcl.Imaging.pngimage;
+
+
+     type
+
+    TShip1 = class
+    private
+    procedure Image1;
+    function RandomOnCentre(a,b:integer;  DField: MField):boolean;
+    public
+     Ship1Image: TImage;
+     x,y:integer;
+     Live1:byte;
+
+     constructor CreatBOT( NewN:integer; var DField:MField);
+
+    end;
+
+
+implementation
+
+
+
+constructor TShip1.CreatBOT(NewN:integer; var DField:MField);
+var i,a,b,Z:integer;
+begin
+     Image1;
+
+      while true do
+          begin
+    a:=RandomRange(1,NewN+1);
+    b:=RandomRange(1,NewN+1);
+            if RandomOnCentre(a,b,DField) then
+        begin
+             DField[a,b]:=1;
+             Live1:=1;
+             x:=a;
+             y:=b;
+             exit;
+          end;
+
+end;
+
+{ TShip1 }
+
+end;
+
+
+
+
+
+
+
+
+procedure TShip1.Image1;
+begin
+ Ship1Image:=TImage.Create(Ship1Image);
+       Ship1Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
+end;
+
+function TShip1.RandomOnCentre(a, b: integer; DField: MField): boolean;
+begin
+  Result:=False;
+   if  (DField[a,b]=0)   then
+       if (DField[a+1,b]<>1)    then
+          if (DField[a-1,b]<>1)    then
+               if (DField[a,b+1]<>1)  then
+                    if (DField[a,b-1]<>1)  then
+                       if (DField[a+1,b+1]<>1)  then
+                         if (DField[a+1,b-1]<>1)  then
+                            if (DField[a-1,b+1]<>1) then
+                               if (DField[a-1,b-1]<>1)  then
+                                     Result:=true;
+
+end;
+
+
+
+
+end.
+
+
+
+
