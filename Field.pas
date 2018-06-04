@@ -24,7 +24,6 @@ TForm1 = class(TForm)
     BitBtn1: TBitBtn;
 
     procedure FormCreate(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
     procedure BitBtn1Click(Sender: TObject);
   private
@@ -143,13 +142,7 @@ end;
 
 
 
-procedure TForm1.Button3Click(Sender: TObject);
-var i,j:integer;
-begin
- for i := 1 to n-2 do
- for j := 1 to n-2 do
-    ImageOnClick(Image[j,i]);
-end;
+
 
 
 
