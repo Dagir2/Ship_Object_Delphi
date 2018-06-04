@@ -14,7 +14,7 @@ type
   end;
 
 implementation
-uses Field,PShip1x1,PShip2x2,Pship3x3,Pship4x4;
+uses Field,PShip1x1,PShip2x2,Pship3x3,Pship4x4,Menu;
 
 { 
   Important: Methods and properties of objects in visual components can only be

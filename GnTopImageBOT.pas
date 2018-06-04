@@ -17,7 +17,7 @@ type
   end;
 
 implementation
- uses Field,PShip1x1,PShip2x2,Pship3x3,Pship4x4,PImage,System.SysUtils;
+ uses Field,PShip1x1,PShip2x2,Pship3x3,Pship4x4,PImage,System.SysUtils,Menu;
 {
   Important: Methods and properties of objects in visual components can only be
   used in a method called using Synchronize, for example,
@@ -60,9 +60,9 @@ if (j<>0) or (i<>n-1) or (i<>0) or (j<>n-1) then
 
 if (j<>0) and (i<>n-1) and (i<>0) and (j<>n-1)  then
   begin
-  Image[j,i]:=TTopImageBOT.Create(Form1);
-  Image[j,i].Parent:=Form1;
-  Image[j,i].Left:=1000+LeftShift;
+  Image[j,i]:=TTopImageBOT.Create(Form1.Panel2);
+  Image[j,i].Parent:=Form1.Panel2;
+  Image[j,i].Left:=0+LeftShift;
   Image[j,i].Top:=20+TopShift;
   Image[j,i].Width:=20;
   Image[j,i].Height:=20;
@@ -99,6 +99,9 @@ begin
           TopShift:=TopShift+20;
        end;
 
+       for i := 0 to n-1 do
+        for j := 0 to n-1 do
+          Image[j,i].Enabled:=false;
 end;
 
 

@@ -10,8 +10,8 @@ uses
 
     TShip1 = class
     private
+    procedure Image1;
     function RandomOnCentre(a,b:integer;  DField: MField):boolean;
-    procedure  CreatShip1Image;
     public
      Ship1Image: TImage;
      x,y:integer;
@@ -29,6 +29,7 @@ implementation
 constructor TShip1.CreatBOT(NewN:integer; var DField:MField);
 var i,a,b,Z:integer;
 begin
+     Image1;
 
       while true do
           begin
@@ -40,8 +41,6 @@ begin
              Live1:=1;
              x:=a;
              y:=b;
-
-             CreatShip1Image;
              exit;
           end;
 
@@ -55,28 +54,13 @@ end;
 
 
 
-procedure TShip1.CreatShip1Image;
-var ShipRandomPosition:byte;
+
+
+
+procedure TShip1.Image1;
 begin
- ShipRandomPosition:=RandomRange(1,5);
- case ShipRandomPosition of
-  1:begin
-    Ship1Image:=TImage.Create(Ship1Image);
-    Ship1Image.Picture.LoadFromFile('Textures/Ship1x1/sprite_TOP.png');
-  end;
-  2:begin
-    Ship1Image:=TImage.Create(Ship1Image);
-    Ship1Image.Picture.LoadFromFile('Textures/Ship1x1/sprite_Down.png');
-  end;
-  3:begin
-    Ship1Image:=TImage.Create(Ship1Image);
-    Ship1Image.Picture.LoadFromFile('Textures/Ship1x1/sprite_Left.png');
-  end;
-  4:begin
-    Ship1Image:=TImage.Create(Ship1Image);
-    Ship1Image.Picture.LoadFromFile('Textures/Ship1x1/sprite_Right.png');
-  end;
- end;
+ Ship1Image:=TImage.Create(Ship1Image);
+       Ship1Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
 end;
 
 function TShip1.RandomOnCentre(a, b: integer; DField: MField): boolean;

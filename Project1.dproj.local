@@ -1,28 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.413,=C:\Users\danil\Desktop\Курсавая 12\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.186,=C:\Users\danil\Desktop\Курсавая 12\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.416,=C:\Users\danil\Desktop\Курсавая 12\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.479,C:\Users\danil\Desktop\Курсавая 12\GnTopImageBOT.pas=C:\Users\danil\Desktop\Курсавая 12\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.837,C:\Users\danil\Desktop\Курсавая 12\Unit2.pas=C:\Users\danil\Desktop\Курсавая 12\Pship3x3.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.418,C:\Users\danil\Desktop\Курсавая 12\PShip2x2.pas=C:\Users\danil\Desktop\Курсавая 12\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.385,C:\Users\danil\Desktop\Курсавая 12\Project1.dproj=C:\Users\danil\Desktop\Курсавая 12\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.260,D:\Kursach\Ship_Object_Delphi\Menu.pas=D:\Kursach\Ship_Object_Delphi\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.689,C:\Users\danil\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\danil\Desktop\Курсавая 12\Field.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.414,C:\Users\danil\Desktop\Курсавая 12\Types.pas=C:\Users\danil\Desktop\Курсавая 12\MyTypes.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.837,C:\Users\danil\Desktop\Курсавая 12\Pship3x3.pas=C:\Users\danil\Desktop\Курсавая 12\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.260,D:\Kursach\Ship_Object_Delphi\Menu.dfm=D:\Kursach\Ship_Object_Delphi\Unit2.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.455,C:\Users\danil\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\danil\Desktop\Курсавая 12\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.827,D:\Kursach\Ship_Object_Delphi\Unit3.dfm=D:\Kursach\Ship_Object_Delphi\Option.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.689,C:\Users\danil\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\danil\Desktop\Курсавая 12\Field.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.847,=D:\Kursach\Ship_Object_Delphi\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.827,D:\Kursach\Ship_Object_Delphi\Unit3.pas=D:\Kursach\Ship_Object_Delphi\Option.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.863,=C:\Users\danil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.351,C:\Users\danil\Desktop\Курсавая 12\Pship4x4.pas=C:\Users\danil\Desktop\Курсавая 12\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.744,=C:\Users\danil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.436,=C:\Users\danil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.245,=C:\Users\danil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.744,=C:\Users\danil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.385,C:\Users\danil\Desktop\Курсавая 12\Project1.dproj=C:\Users\danil\Desktop\Курсавая 12\Project1.dproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.689,C:\Users\danil\Desktop\Курсавая 12\Field.pas=C:\Users\danil\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.744,C:\Users\danil\Desktop\Курсавая 12\Types.pas=C:\Users\danil\Desktop\Курсавая 12\Unit2.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.458,C:\Users\danil\Desktop\Курсавая 12\PShip1x1.pas=C:\Users\danil\Desktop\Курсавая 12\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.414,C:\Users\danil\Desktop\Курсавая 12\MyTypes.pas=C:\Users\danil\Desktop\Курсавая 12\Types.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.689,C:\Users\danil\Desktop\Курсавая 12\Field.dfm=C:\Users\danil\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.400,C:\Users\danil\Desktop\Курсавая 12\Unit1.pas=C:\Users\danil\Desktop\Курсавая 12\GnShip.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.885,=C:\Users\danil\Desktop\Курсавая 12\Unit1.pas</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.455,C:\Users\danil\Desktop\Курсавая 12\Project1.dproj=C:\Users\danil\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.416,=C:\Users\danil\Desktop\Курсавая 12\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.479,C:\Users\danil\Desktop\Курсавая 12\Unit1.pas=C:\Users\danil\Desktop\Курсавая 12\GnTopImageBOT.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.418,C:\Users\danil\Desktop\Курсавая 12\Unit1.pas=C:\Users\danil\Desktop\Курсавая 12\PShip2x2.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.845,=C:\Users\danil\Desktop\Курсавая 12\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.400,C:\Users\danil\Desktop\Курсавая 12\GnShip.pas=C:\Users\danil\Desktop\Курсавая 12\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.544,D:\Kursach\Ship_Object_Delphi\Unit1.pas=D:\Kursach\Ship_Object_Delphi\GnShipUser.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.039,=D:\Kursach\Ship_Object_Delphi\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.165,=D:\Kursach\Ship_Object_Delphi\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.458,C:\Users\danil\Desktop\Курсавая 12\Unit1.pas=C:\Users\danil\Desktop\Курсавая 12\PShip1x1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.186,=C:\Users\danil\Desktop\Курсавая 12\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.351,C:\Users\danil\Desktop\Курсавая 12\Unit2.pas=C:\Users\danil\Desktop\Курсавая 12\Pship4x4.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.413,=C:\Users\danil\Desktop\Курсавая 12\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.744,C:\Users\danil\Desktop\Курсавая 12\Unit2.pas=C:\Users\danil\Desktop\Курсавая 12\Types.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.297,=C:\Users\danil\Desktop\Курсавая 12\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.885,=C:\Users\danil\Desktop\Курсавая 12\Unit1.pas</Transaction>
     <Transaction>1899.12.30 00:00:00.000.047,=C:\Users\danil\Desktop\Курсавая 12\Unit1.pas</Transaction>
   </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Field.pas"/>
+    <File Path="Field.dfm"/>
+    <File Path="GnShip.pas"/>
+    <File Path="GnTopImageBOT.pas"/>
+    <File Path="MyTypes.pas"/>
+    <File Path="PShip1x1.pas"/>
+    <File Path="PShip2x2.pas"/>
+    <File Path="Pship3x3.pas"/>
+    <File Path="Pship4x4.pas"/>
+    <File Path="GnShipUser.pas"/>
+    <File Path="Menu.pas"/>
+    <File Path="Menu.dfm"/>
+    <File Path="Option.pas"/>
+    <File Path="Option.dfm"/>
+  </ProjectSortOrder>
 </BorlandProject>

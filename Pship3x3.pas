@@ -7,6 +7,7 @@ interface
   type
   TShip3 = class (TShip2)
     private
+      procedure Image3;
 
     public
      Ship3Image: TImage;
@@ -21,11 +22,26 @@ implementation
 
 
 
+procedure TShip3.Image3;
+begin
+
+      Ship1Image:=TImage.Create(Ship1Image);
+       Ship1Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
+
+        Ship2Image:=TImage.Create(Ship2Image);
+       Ship2Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
+
+        Ship3Image:=TImage.Create(Ship3Image);
+       Ship3Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
+end;
+
+
 { TShip3 }
 
 constructor TShip3.CreatBOT(NewN: integer; var DField: MField);
 var i,a,b:integer;  Ship1x2,Ship1x3:byte;
 begin
+Image3;
 while True do
           begin
             a:=RandomRange(1,NewN+1);
@@ -56,6 +72,8 @@ while True do
                                             Live3:=1;
                                             x2:=a-2;
                                             y2:=b;
+
+
                                             exit;
                                           end;
                                       end;
@@ -77,6 +95,8 @@ while True do
                                             Live3:=1;
                                             x2:=a+1;
                                             y2:=b;
+
+
                                             exit;
                                           end;
 
@@ -113,6 +133,8 @@ while True do
                                             Live3:=1;
                                             x2:=a-1;
                                             y2:=b;
+
+
                                             exit;
                                           end;
                                       end;

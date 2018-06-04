@@ -11,10 +11,11 @@ interface
 
 
     TShip2 = class
+    private
+    procedure Image2;
+    procedure TopDownImage(b, b1: integer);
     protected
-       procedure qSort(var A: TArray; min, max: Integer);
-      procedure TopDownImage(b,b1:integer);
-      procedure LeftRightImage(a,a1:integer);
+       procedure qSort(var A:mas; min, max: Integer);
       function RandomOnCentre(a,b,N:integer; DField: MField):boolean;
       function RandomOnLeft(a,b,N:integer; DField: MField):boolean;
       function RandomOnTop(a,b,N:integer; DField: MField):boolean;
@@ -40,7 +41,7 @@ var i,a,b:integer;  Ship1x2:byte;
 
 begin
 
-
+  Image2;
 
     while True do
           begin
@@ -64,7 +65,6 @@ begin
                                             Live2:=1;
                                             x1:=a-1;
                                             y1:=b;
-                                            LeftRightImage(x,x1);
                                             exit;
                                           end;
 
@@ -80,7 +80,6 @@ begin
                                             Live2:=1;
                                             x1:=a;
                                             y1:=b-1;
-                                            TopDownImage(y,y1);
                                             exit;
                                           end;
 
@@ -96,7 +95,6 @@ begin
                                             Live2:=1;
                                             x1:=a;
                                             y1:=b+1;
-                                            TopDownImage(y,y1);
                                             exit;
                                             end;
 
@@ -112,7 +110,6 @@ begin
                                             Live2:=1;
                                             x1:=a+1;
                                             y1:=b;
-                                            LeftRightImage(x,x1);
                                             exit;
                                       end;
                                     end;
@@ -133,53 +130,16 @@ begin
 
 
 
-procedure TShip2.LeftRightImage(a, a1: integer);
-var RL:integer;
+procedure TShip2.Image2;
 begin
-if a>a1 then
-begin
+Ship1Image:=TImage.Create(Ship1Image);
+       Ship1Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
 
-       Rl:=RandomRange(1,3);
-  case  RL of
-      1:begin
         Ship2Image:=TImage.Create(Ship2Image);
-        Ship2Image.Picture.LoadFromFile('Textures/Ship2x2/DownShip_Right.png');
-        Ship1Image:=TImage.Create(Ship1Image);
-        Ship1Image.Picture.LoadFromFile('Textures/Ship2x2/TopShip_Left.png');
-
-        end;
-       2:begin
-          Ship2Image:=TImage.Create(Ship2Image);
-        Ship2Image.Picture.LoadFromFile('Textures/Ship2x2/TopShip_Right.png');
-        Ship1Image:=TImage.Create(Ship1Image);
-        Ship1Image.Picture.LoadFromFile('Textures/Ship2x2/DownShip_Left.png');
-          end;
-  end;
+       Ship2Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
 end;
 
-if a<a1 then
-    begin
-     Rl:=RandomRange(1,3);
-        case  RL of
-           1:begin
-               Ship1Image:=TImage.Create(Ship1Image);
-               Ship1Image.Picture.LoadFromFile('Textures/Ship2x2/DownShip_Right.png');
-               Ship2Image:=TImage.Create(Ship2Image);
-               Ship2Image.Picture.LoadFromFile('Textures/Ship2x2/TopShip_Left.png');
-
-              end;
-            2:begin
-            Ship1Image:=TImage.Create(Ship1Image);
-            Ship1Image.Picture.LoadFromFile('Textures/Ship2x2/TopShip_Right.png');
-            Ship2Image:=TImage.Create(Ship2Image);
-            Ship2Image.Picture.LoadFromFile('Textures/Ship2x2/DownShip_Left.png');
-            end;
-        end;
-
-    end;
-end;
-
-procedure TShip2.qSort(var A: TArray; min, max: Integer);
+procedure TShip2.qSort(var  A:mas; min, max: Integer);
 var i, j, supp, tmp: Integer;
 begin
 supp:=A[max-((max-min) div 2)];

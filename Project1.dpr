@@ -9,13 +9,17 @@ uses
   MyTypes in 'MyTypes.pas',
   Pship3x3 in 'Pship3x3.pas',
   Pship4x4 in 'Pship4x4.pas',
-  GnTopImageBOT in 'GnTopImageBOT.pas';
+  GnTopImageBOT in 'GnTopImageBOT.pas',
+  GnShipUser in 'GnShipUser.pas',
+  Menu in 'Menu.pas' {Form2},
+  Option in 'Option.pas' {Form3};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
   Application.Run;
 end.
