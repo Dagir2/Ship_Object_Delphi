@@ -329,16 +329,16 @@ Image4;
 procedure TShip4.Image4;
 begin
 Ship1Image:=TImage.Create(Ship1Image);
-       Ship1Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
+       Ship1Image.Picture.LoadFromFile('Textures\Other\Center.png');
 
         Ship2Image:=TImage.Create(Ship2Image);
-       Ship2Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
+       Ship2Image.Picture.LoadFromFile('Textures\Other\Center.png');
 
         Ship3Image:=TImage.Create(Ship3Image);
-       Ship3Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
+       Ship3Image.Picture.LoadFromFile('Textures\Other\Center.png');
 
         Ship4Image:=TImage.Create(Ship4Image);
-       Ship4Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
+       Ship4Image.Picture.LoadFromFile('Textures\Other\Center.png');
 end;
 
 end.

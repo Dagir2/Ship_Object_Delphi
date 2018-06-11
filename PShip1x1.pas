@@ -60,7 +60,7 @@ end;
 procedure TShip1.Image1;
 begin
  Ship1Image:=TImage.Create(Ship1Image);
-       Ship1Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
+       Ship1Image.Picture.LoadFromFile('Textures\Other\Center.png');
 end;
 
 function TShip1.RandomOnCentre(a, b: integer; DField: MField): boolean;

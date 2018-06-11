@@ -13,7 +13,6 @@ interface
     TShip2 = class
     private
     procedure Image2;
-    procedure TopDownImage(b, b1: integer);
     protected
        procedure qSort(var A:mas; min, max: Integer);
       function RandomOnCentre(a,b,N:integer; DField: MField):boolean;
@@ -133,10 +132,10 @@ begin
 procedure TShip2.Image2;
 begin
 Ship1Image:=TImage.Create(Ship1Image);
-       Ship1Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
+       Ship1Image.Picture.LoadFromFile('Textures\Other\Center.png');
 
         Ship2Image:=TImage.Create(Ship2Image);
-       Ship2Image.Picture.LoadFromFile('Textures/Ship3x3/Center.png');
+       Ship2Image.Picture.LoadFromFile('Textures\Other\Center.png');
 end;
 
 procedure TShip2.qSort(var  A:mas; min, max: Integer);
@@ -231,51 +230,9 @@ Result:=false;
 end;
 
 
-procedure TShip2.TopDownImage(b, b1: integer);
-var
-TD:integer;
-begin
- if b>b1 then
-begin
 
-       TD:=RandomRange(1,3);
-  case  TD of
-      1:begin
-        Ship2Image:=TImage.Create(Ship2Image);
-        Ship2Image.Picture.LoadFromFile('Textures/Ship2x2/DownShip_Down.png');
-        Ship1Image:=TImage.Create(Ship1Image);
-        Ship1Image.Picture.LoadFromFile('Textures/Ship2x2/TopShip_Top.png');
 
-        end;
-       2:begin
-          Ship2Image:=TImage.Create(Ship2Image);
-        Ship2Image.Picture.LoadFromFile('Textures/Ship2x2/TopShip_Down.png');
-        Ship1Image:=TImage.Create(Ship1Image);
-        Ship1Image.Picture.LoadFromFile('Textures/Ship2x2/DownShip_Top.png');
-          end;
-  end;
-end;
 
-if b<b1 then
-    begin
-      TD:=RandomRange(1,3);
-        case   TD of
-           1:begin
-               Ship1Image:=TImage.Create(Ship1Image);
-               Ship1Image.Picture.LoadFromFile('Textures/Ship2x2/DownShip_Down.png');
-               Ship2Image:=TImage.Create(Ship2Image);
-               Ship2Image.Picture.LoadFromFile('Textures/Ship2x2/TopShip_Top.png');
 
-              end;
-            2:begin
-            Ship1Image:=TImage.Create(Ship1Image);
-            Ship1Image.Picture.LoadFromFile('Textures/Ship2x2/TopShip_Down.png');
-            Ship2Image:=TImage.Create(Ship2Image);
-            Ship2Image.Picture.LoadFromFile('Textures/Ship2x2/DownShip_Top.png');
-            end;
-        end;
-
-    end;
-end;
 
 end.

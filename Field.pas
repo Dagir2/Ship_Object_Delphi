@@ -29,6 +29,8 @@ TForm1 = class(TForm)
   private
     { Private declarations }
   public
+    procedure BotVictory;
+    procedure UserVictory;
     procedure ImageOnClick(Sender: TObject);
     procedure BotImageOnClick(Sender: TObject);
     { Public declarations }
@@ -38,7 +40,7 @@ TForm1 = class(TForm)
 var
   Form1: TForm1;
 
-  NImage:integer;
+  NImage,UserKill,BotKill:integer;
 
 
   Pz,Pz1,Pz2,Pz3:Integer;
@@ -78,7 +80,7 @@ end;
 
 procedure TForm1.BotImageOnClick(Sender: TObject);
 var Fimage:TTopImageBOT;
-i:integer;
+i,a,b:integer;
 begin
     if Sender is  TTopImageBOT then
    begin
@@ -88,32 +90,153 @@ begin
         Fimage.Picture.LoadFromFile('Textures\Other\NotKill.png');
       for i := 0 to z-1 do
         if (Fimage.Fx=PlerShip1x1[i].x) and (Fimage.Fy=PlerShip1x1[i].y) then
+        begin
         Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        inc(BotKill);
+        if BotKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            BotVictory;
+            exit;
+            end;
+
+          while True do
+             begin
+      a:=RandomRange(1,n-1);
+      b:=RandomRange(1,n-1);
+
+             if PlerImage[a,b].Enabled then
+      begin
+       BotImageOnClick(PlerImage[a,b]);
+       exit;
+      end;
+             end;
+
+        end;
 
 /////////////////////////////////////////////////////////////////////
           for i := 0 to z1-1 do
           begin
         if (Fimage.Fx=PlerShip2x2[i].x) and (Fimage.Fy=PlerShip2x2[i].y) then
-       Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+       begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        inc(BotKill);
+        if BotKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            BotVictory;
+            exit;
+            end;
+          while True do
+             begin
+      a:=RandomRange(1,n-1);
+      b:=RandomRange(1,n-1);
+
+             if PlerImage[a,b].Enabled then
+      begin
+       BotImageOnClick(PlerImage[a,b]);
+       exit;
+      end;
+             end;
+
+        end;
 
 
         if (Fimage.Fx=PlerShip2x2[i].x1) and (Fimage.Fy=PlerShip2x2[i].y1) then
+        begin
         Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        inc(BotKill);
+        if BotKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            BotVictory;
+            exit;
+            end;
+          while True do
+             begin
+      a:=RandomRange(1,n-1);
+      b:=RandomRange(1,n-1);
+
+             if PlerImage[a,b].Enabled then
+      begin
+       BotImageOnClick(PlerImage[a,b]);
+       exit;
+      end;
+             end;
+
+        end;
         end;
 /////////////////////////////////////////////////////////////////////////
               for i := 0 to z2-1 do
               begin
         if (Fimage.Fx=PlerShip3x3[i].x) and (Fimage.Fy=PlerShip3x3[i].y) then
-       Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+      begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        inc(BotKill);
+        if BotKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            BotVictory;
+            exit;
+            end;
+          while True do
+             begin
+      a:=RandomRange(1,n-1);
+      b:=RandomRange(1,n-1);
+
+             if PlerImage[a,b].Enabled then
+      begin
+       BotImageOnClick(PlerImage[a,b]);
+       exit;
+      end;
+             end;
+
+        end;
 
 
         if (Fimage.Fx=PlerShip3x3[i].x1) and (Fimage.Fy=PlerShip3x3[i].y1) then
-       Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+      begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        inc(BotKill);
+        if BotKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            BotVictory;
+            exit;
+            end;
+          while True do
+             begin
+      a:=RandomRange(1,n-1);
+      b:=RandomRange(1,n-1);
+
+             if PlerImage[a,b].Enabled then
+      begin
+       BotImageOnClick(PlerImage[a,b]);
+       exit;
+      end;
+             end;
+
+        end;
 
 
 
         if (Fimage.Fx=PlerShip3x3[i].x2) and (Fimage.Fy=PlerShip3x3[i].y2) then
-       Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+       begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        inc(BotKill);
+        if BotKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            BotVictory;
+            exit;
+            end;
+          while True do
+             begin
+      a:=RandomRange(1,n-1);
+      b:=RandomRange(1,n-1);
+
+             if PlerImage[a,b].Enabled then
+      begin
+       BotImageOnClick(PlerImage[a,b]);
+       exit;
+      end;
+             end;
+
+        end;
 
               end;
 
@@ -121,18 +244,98 @@ begin
      for i := 0 to z3-1 do
               begin
         if (Fimage.Fx=PlerShip4x4[i].x) and (Fimage.Fy=PlerShip4x4[i].y) then
-       Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+       begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        inc(BotKill);
+        if BotKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            BotVictory;
+            exit;
+            end;
+          while True do
+             begin
+      a:=RandomRange(1,n-1);
+      b:=RandomRange(1,n-1);
+
+             if PlerImage[a,b].Enabled then
+      begin
+       BotImageOnClick(PlerImage[a,b]);
+       exit;
+      end;
+             end;
+
+        end;
 
 
         if (Fimage.Fx=PlerShip4x4[i].x1) and (Fimage.Fy=PlerShip4x4[i].y1) then
-       Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+       begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        inc(BotKill);
+        if BotKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            BotVictory;
+            exit;
+            end;
+          while True do
+             begin
+      a:=RandomRange(1,n-1);
+      b:=RandomRange(1,n-1);
+
+             if PlerImage[a,b].Enabled then
+      begin
+       BotImageOnClick(PlerImage[a,b]);
+       exit;
+      end;
+             end;
+
+        end;
 
 
         if (Fimage.Fx=PlerShip4x4[i].x2) and (Fimage.Fy=PlerShip4x4[i].y2) then
+      begin
         Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        inc(BotKill);
+        if BotKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            BotVictory;
+            exit;
+            end;
+          while True do
+             begin
+      a:=RandomRange(1,n-1);
+      b:=RandomRange(1,n-1);
+
+             if PlerImage[a,b].Enabled then
+      begin
+       BotImageOnClick(PlerImage[a,b]);
+       exit;
+      end;
+             end;
+
+        end;
 
          if (Fimage.Fx=PlerShip4x4[i].x3) and (Fimage.Fy=PlerShip4x4[i].y3) then
-       Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+       begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        inc(BotKill);
+        if BotKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            BotVictory;
+            exit;
+            end;
+          while True do
+             begin
+      a:=RandomRange(1,n-1);
+      b:=RandomRange(1,n-1);
+
+             if PlerImage[a,b].Enabled then
+      begin
+       BotImageOnClick(PlerImage[a,b]);
+       exit;
+      end;
+             end;
+
+        end;
               end;
 
       end;
@@ -145,6 +348,21 @@ end;
 
 
 
+
+procedure TForm1.BotVictory;
+var i,j:integer;
+begin
+
+showmessage('Вы проиграли!');
+
+for i := 0 to n-1 do
+        for j := 0 to n-1 do
+          Image[j,i].Enabled:=false;
+
+          for i := 0 to n-1 do
+        for j := 0 to n-1 do
+          PlerImage[j,i].Enabled:=false;
+end;
 
 procedure TForm1.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
@@ -201,31 +419,104 @@ begin
       Fimage.Picture.LoadFromFile('Textures/Other/Empty.png');
       for i := 0 to z-1 do
         if (Fimage.Fx=Ship1x1[i].x) and (Fimage.Fy=Ship1x1[i].y) then
-        Fimage.Picture:=Ship1x1[i].Ship1Image.Picture;
+       begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        Ship1x1[i].Live1:=0;
+        if Ship1x1[i].Live1=0 then
+             showmessage('Вражеский катер уничтожен!');
+
+        inc(UserKill);
+        if UserKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            UserVictory;
+            exit;
+            end;
+            exit;
+        end;
 /////////////////////////////////////////////////////////////////////
           for i := 0 to z1-1 do
           begin
         if (Fimage.Fx=Ship2x2[i].x) and (Fimage.Fy=Ship2x2[i].y) then
-        Fimage.Picture:=Ship2x2[i].Ship1Image.Picture;
+         begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        Ship2x2[i].Live1:=0;
+        if (Ship2x2[i].Live1=0) and (Ship2x2[i].Live2=0) then
+             showmessage('Вражеский эсминец уничтожен!');
+        inc(UserKill);
+        if UserKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            UserVictory;
+            exit;
+            end;
+            exit;
+        end;
 
 
         if (Fimage.Fx=Ship2x2[i].x1) and (Fimage.Fy=Ship2x2[i].y1) then
-        Fimage.Picture:=Ship2x2[i].Ship2Image.Picture;
+         begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        Ship2x2[i].Live2:=0;
+        if (Ship2x2[i].Live1=0) and (Ship2x2[i].Live2=0) then
+             showmessage('Вражеский эсминец уничтожен!');
+        inc(UserKill);
+        if UserKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            UserVictory;
+            exit;
+            end;
+            exit;
+        end;
         end;
 /////////////////////////////////////////////////////////////////////////
               for i := 0 to z2-1 do
               begin
         if (Fimage.Fx=Ship3x3[i].x) and (Fimage.Fy=Ship3x3[i].y) then
-        Fimage.Picture:=Ship3x3[i].Ship1Image.Picture;
+        begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+         Ship3x3[i].Live1:=0;
+        if (Ship3x3[i].Live1=0) and (Ship3x3[i].Live2=0) and (Ship3x3[i].Live3=0) then
+             showmessage('Вражеский крейсер уничтожен!');
+        inc(UserKill);
+        if UserKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            UserVictory;
+            exit;
+            end;
+            exit;
+        end;
 
 
         if (Fimage.Fx=Ship3x3[i].x1) and (Fimage.Fy=Ship3x3[i].y1) then
-        Fimage.Picture:=Ship3x3[i].Ship2Image.Picture;
+         begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        Ship3x3[i].Live2:=0;
+        if (Ship3x3[i].Live1=0) and (Ship3x3[i].Live2=0) and (Ship3x3[i].Live3=0) then
+             showmessage('Вражеский крейсер уничтожен!');
+        inc(UserKill);
+        if UserKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            UserVictory;
+            exit;
+            end;
+            exit;
+        end;
 
 
 
         if (Fimage.Fx=Ship3x3[i].x2) and (Fimage.Fy=Ship3x3[i].y2) then
-        Fimage.Picture:=Ship3x3[i].Ship3Image.Picture;
+        begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+        Ship3x3[i].Live3:=0;
+        if (Ship3x3[i].Live1=0) and (Ship3x3[i].Live2=0) and (Ship3x3[i].Live3=0) then
+             showmessage('Вражеский крейсер уничтожен!');
+        inc(UserKill);
+        if UserKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            UserVictory;
+            exit;
+            end;
+            exit;
+        end;
 
               end;
 
@@ -233,18 +524,66 @@ begin
      for i := 0 to z3-1 do
               begin
         if (Fimage.Fx=Ship4x4[i].x) and (Fimage.Fy=Ship4x4[i].y) then
-        Fimage.Picture:=Ship4x4[i].Ship1Image.Picture;
+         begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+         Ship4x4[i].Live1:=0;
+        if (Ship4x4[i].Live1=0) and (Ship4x4[i].Live2=0) and (Ship4x4[i].Live3=0) and (Ship4x4[i].Live4=0) then
+             showmessage('Вражеский линкор уничтожен!');
+        inc(UserKill);
+        if UserKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            UserVictory;
+            exit;
+            end;
+            exit;
+        end;
 
 
         if (Fimage.Fx=Ship4x4[i].x1) and (Fimage.Fy=Ship4x4[i].y1) then
-        Fimage.Picture:=Ship4x4[i].Ship2Image.Picture;
+        begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+          Ship4x4[i].Live2:=0;
+        if (Ship4x4[i].Live1=0) and (Ship4x4[i].Live2=0) and (Ship4x4[i].Live3=0) and (Ship4x4[i].Live4=0) then
+             showmessage('Вражеский линкор уничтожен!');
+        inc(UserKill);
+        if UserKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            UserVictory;
+            exit;
+            end;
+            exit;
+        end;
 
 
         if (Fimage.Fx=Ship4x4[i].x2) and (Fimage.Fy=Ship4x4[i].y2) then
-        Fimage.Picture:=Ship4x4[i].Ship3Image.Picture;
+         begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+          Ship4x4[i].Live3:=0;
+        if (Ship4x4[i].Live1=0) and (Ship4x4[i].Live2=0) and (Ship4x4[i].Live3=0) and (Ship4x4[i].Live4=0) then
+             showmessage('Вражеский линкор уничтожен!');
+        inc(UserKill);
+        if UserKill=(z+(z1*2)+(z2*3)+(z3*4))then
+           begin
+            UserVictory;
+            exit;
+            end;
+            exit;
+        end;
 
          if (Fimage.Fx=Ship4x4[i].x3) and (Fimage.Fy=Ship4x4[i].y3) then
-        Fimage.Picture:=Ship4x4[i].Ship4Image.Picture;
+        begin
+        Fimage.Picture.LoadFromFile('Textures\Other\Kill.png');
+         Ship4x4[i].Live4:=0;
+        if (Ship4x4[i].Live1=0) and (Ship4x4[i].Live2=0) and (Ship4x4[i].Live3=0) and (Ship4x4[i].Live4=0) then
+             showmessage('Вражеский линкор уничтожен!');
+        inc(UserKill);
+        if UserKill=(z+(z1*2)+(z2*3)+(z3*4)) then
+           begin
+            UserVictory;
+            exit;
+            end;
+            exit;
+        end;
               end;
 
                while True do
@@ -266,5 +605,19 @@ begin
 
 
 
+
+procedure TForm1.UserVictory;
+var i,j:integer;
+begin
+   showmessage('Вы победили!');
+
+for i := 0 to n-1 do
+        for j := 0 to n-1 do
+          Image[j,i].Enabled:=false;
+
+          for i := 0 to n-1 do
+        for j := 0 to n-1 do
+          PlerImage[j,i].Enabled:=false;
+end;
 
 end.
